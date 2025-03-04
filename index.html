@@ -1,1 +1,92 @@
-<p>Hello</p>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày 8/3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #fff;
+            border: 2px solid #e91e63;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .envelope.open {
+            transform: scaleY(1);
+            box-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+            animation: bounce 0.5s ease;
+        }
+        .letter {
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+        .envelope.open .letter {
+            opacity: 1;
+        }
+        .message {
+            color: #e91e63;
+        }
+        button {
+            background-color: #e91e63;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+        button:hover {
+            background-color: #d81b60;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🌸 Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3 🌸</h1>
+    <button onclick="openLetter()">Mở thư chúc mừng 💌</button>
+    <div class="envelope" id="envelope">
+        <div class="letter">
+            <h2 class="message">💖 Lời Chúc Đặc Biệt 💖</h2>
+            <p>Chúc tất cả các chị em luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống!</p>
+            <p>💐 Bạn thật tuyệt vời! Hãy luôn mỉm cười và tự tin như thế nhé! 💐</p>
+        </div>
+    </div>
+    <script>
+        function openLetter() {
+            const envelope = document.getElementById("envelope");
+            envelope.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>
