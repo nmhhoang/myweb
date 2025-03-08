@@ -420,7 +420,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            width: 230%;
             height: 100%;
         }
 
@@ -441,6 +441,58 @@
             margin-top: 10px;
 
         }
+
+
+        #castle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.img-letter {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img-letter img {
+    max-width: 120%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.letter {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.valentines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    font-size: 20px;
+    color: #e91e63;
+}
+
+.click_here {
+    margin-top: 10px;
+    cursor: pointer;
+}
      
 
         /* style letter */
@@ -622,16 +674,16 @@
 }
 .giftbox .img{
     position: absolute;
-    width: 180px;
+    width: 230px;
     bottom: -10px;
     left: 50px;
     z-index: 100;
 }
 .giftbox img{
-    width: 100%;
+    width: 230%;
 }
 .textLetter {
-            width: 100%;
+            width: 65%;
             flex-direction: column;
             justify-content: center;
             display: flex;
@@ -893,17 +945,17 @@
         }
     </script>
         <div id="castle" style="display: none;">
-            <!-- <div class = "title">
-                <h1>🌸 Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3 🌸</h1>
-            </div> -->
+            <div class="img-letter">
+                <img src="./image/img_3.png" alt=""style="padding-bottom: 20px; padding-left: 10px;">
+            </div>
             <div class="letter">
                 <div class="valentines">
                     <div class="envelope"></div>
                     <div class="front"></div>
-                    <div class="card">
-                        <div class="text">Happy</br> Women's</br> Day!</div>
+                    <div class="card" style="top: 0px;padding-left: 0px;left: 7px;">
+                        <div class="click_here" style="font-size: 11px; color: red;">Click on the letter!</div>
+                        <div class="text"></br>Happy</br> Women's</br> Day! </br> </div>
                         <div class="heart"></div>
-                        <div class="click_here" >Click here</div>
 
                     </div>
                     <div class="hearts">
@@ -914,7 +966,7 @@
                         <div class="five"></div>
                     </div>
                 </div>
-                <div class="shadow"></div>
+                <!-- <div class="shadow"></div> -->
             </div>
 
         </div>
@@ -994,12 +1046,9 @@
                     </div>
                     
                     <div class="wrapperLetter">
-                        <div class="giftbox" style="
-    left: auto;
-    right: 40px;
-">
+                        <div class="giftbox" style="left: auto;right: 40px;">
                             <div class="img">
-                                <img src="./image/img_card.jpg" alt="">
+                                <img src="./image/img_5.png" alt=""style="padding-bottom: 20px; padding-left: 10px;">
                             </div>
                         </div>
                         <div class="textLetter">
@@ -1099,7 +1148,7 @@
               top: ' + y2 + 'px;\
               left: ' + x2 + 'px;\
               width: ' + 0 + 'px;\
-              height: ' + 0 + 'px;\
+              height: ' + 0 + ' ;\
               opacity: .1\
           }}';
                 head.appendChild(animation);
@@ -1137,7 +1186,7 @@
         // .textLetter text h2
         let indexText = 0;
         let textLetter = document.querySelector('.textLetter h2');
-        const textLetterH2 = "Gửi cậu!";
+        const textLetterH2 = "Gửi cậu - Minh Anh!";
         let timoutTextLetter;
 
         function textCharLetter() {
@@ -1165,7 +1214,7 @@
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
-        const textLetterP = "Hôm nay là ngày 08/03. Xin gửi lời chúc tới người tớ yêu thương nhất. Luôn vui vẻ, luôn hạnh phúc và luôn may mắn trong cuộc sống, ngày càng xinh đẹp. Xin gửi tất cả lời chúc tốt đẹp đến với cậu. Love You💗";
+        const textLetterP = "Hôm nay là ngày 08/03. Chúc cậu thật nhiều sức khỏe, luôn vui vẻ, luôn hạnh phúc và ngày càng xinh đẹp. Cậu cười xinh lắm, nên hãy cười thật nhiều như trong ảnh nhé! Xin gửi tất cả lời chúc tốt đẹp đến với cậu. 💗";
         let timoutTextLetterContent;
         function textCharLetterContent() {
             if (indexTextContent < textLetterP.length) {
